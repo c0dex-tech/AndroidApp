@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SchoolAppV2</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="bathroomAvailabilityButtonTitle">Bathroom Availability</string>
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_change_bathroom_availability">ChangeBathroomAvailability</string>
+    <string name="bathroomAvailabilityHeaderText">Bathroom Availability</string>
+    <string name="techHallBathroomTitle">Tech Hall Bathroom</string>
+    <string name="cafeBathroomTitle">Cafeteria Bathroom</string>
+    <string name="scienceHallBathroomTitle">Science Hall Bathrooom</string>
+    <string name="mathHallBathroomTitle">Math Hall Bathroom</string>
+    <string name="boysBathroomSelectionButtonTitle">Boys</string>
+    <string name="girlsBathroomSelectionButtonTitle">Girls</string>
+</resources>
