@@ -17,26 +17,35 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.content.ContextCompat
 import com.app.schoolappv2.ui.theme.SchoolAppV2Theme
 
+// Activity class for the second screen
 class SecondActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-       setContentView(R.layout.activity_second)
 
+        // Set the content view using the specified layout file
+        setContentView(R.layout.activity_second)
+
+        // Get references to the switch and text views
         val switch = findViewById<Switch>(R.id.switch1)
         val text = findViewById<TextView>(R.id.openClosedTextView)
 
-       switch.setOnCheckedChangeListener { buttonView, isChecked ->
-           if(isChecked){
-               text.background = ContextCompat.getDrawable(this, R.drawable.open_textview)
-               text.setTextColor(ContextCompat.getColor(this, R.color.openTextViewColour))
-               text.setText("Open")
-           }else{
-               text.background = ContextCompat.getDrawable(this, R.drawable.closed_textview)
-               text.setTextColor(ContextCompat.getColor(this, R.color.closedTextViewColour))
-               text.setText("Closed")
-           }
-       }
+        // Set up a listener for switch state changes
+        switch.setOnCheckedChangeListener { buttonView, isChecked ->
+            // Check if the switch is checked (ON) or not (OFF)
+            if (isChecked) {
+                // If ON, set background, text color, and text for an open state
+                text.background = ContextCompat.getDrawable(this, R.drawable.open_textview)
+                text.setTextColor(ContextCompat.getColor(this, R.color.openTextViewColour))
+                text.text = "Open"
+            } else {
+                // If OFF, set background, text color, and text for a closed state
+                text.background = ContextCompat.getDrawable(this, R.drawable.closed_textview)
+                text.setTextColor(ContextCompat.getColor(this, R.color.closedTextViewColour))
+                text.text = "Closed"
+            }
+        }
 
+        // Button click listener to navigate to ChangeBathroomAvailability activity
         findViewById<Button>(R.id.changeBathroomAvailability)
             .setOnClickListener {
                 val intent = Intent(this, ChangeBathroomAvailability::class.java)
